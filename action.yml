@@ -1,6 +1,6 @@
 name: 'YAML Lint'
 description: 'Validate YAML syntax'
-author: 'ibiqlik'
+author: 'edshelton'
 
 inputs:
   file_or_dir:
