@@ -23,7 +23,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'docker://ilirbekteshi/action-yamllint'
+  image: 'Dockerfile'
   args:
     - ${{ inputs.file_or_dir }}
     - ${{ inputs.config_file }}
