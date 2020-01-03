@@ -20,6 +20,10 @@ inputs:
     description: 'Return non-zero exit code on warnings as well as errors'
     required: false
     default: "false"
+  no_warnings:
+    description: 'Disables reporting warnings to STDOUT'
+    required: false
+    default: "false"
 
 runs:
   using: 'docker'
@@ -30,6 +34,7 @@ runs:
     - ${{ inputs.config_data }}
     - ${{ inputs.format }}
     - ${{ inputs.strict }}
+    - ${{ inputs.no_warnings }}
 
 branding:
   color: blue
