@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 echo "======================"
 echo "= Linting YAML files ="
@@ -10,7 +10,8 @@ if [ -z "$INPUT_FILE_OR_DIR" ]; then
 fi
 
 STRICT=""
-if [ "$INPUT_STRICT" == "true" ]; then
+
+if [ "$INPUT_STRICT" = "true" ]; then
   STRICT="-s"
 fi
 
@@ -22,7 +23,7 @@ if [ -n "$INPUT_CONFIG_DATA" ]; then
   CONFIG_DATA="-d $INPUT_CONFIG_DATA"
 fi
 
-if [[ -n "$INPUT_NO_WARNINGS" && "$INPUT_NO_WARNINGS" != "false" ]]; then
+if [ -n "$INPUT_NO_WARNINGS" ] && [ "$INPUT_NO_WARNINGS" != "false" ]; then
   NO_WARNINGS="--no-warnings"
 fi
 
